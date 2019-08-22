@@ -1,0 +1,20 @@
+{
+    "$extends": [
+        "defaults",
+        "settings.rotated.wall_switch",
+        "rf.wall_switch",
+        "flow.switch.single"
+    ],
+    "id": "HE307EU",
+    "name": {
+        "en": "HE307EU"
+    },
+    "$pairOptions": {
+        "rf.imitate": {
+            "svg": "./assets/svg/switch.pair.svg"
+        },
+        "rf.test": {
+            "svg": "./assets/svg/switch.test.svg"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "$extends": [
+        "defaults",
+        "rf.socket"
+    ],
+    "id": "HE432EU",
+    "name": {
+        "en": "HE432EU"
+    },
+    "$pairOptions": {
+        "rf.imitate": {
+            "svg": "./assets/svg/remote.pair.svg"
+        },
+        "rf.program": {
+            "svg": "./assets/svg/socket.pair.svg",
+            "body": "rf.pair.program.body.socket"
+        }
+    }
+}

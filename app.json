@@ -1,0 +1,1318 @@
+{
+  "id": "eu.elro.homeeasy",
+  "version": "1.5.5",
+  "compatibility": ">=1.5.6",
+  "sdk": 2,
+  "name": {
+    "en": "Home Easy",
+    "nl": "Home Easy"
+  },
+  "category": [
+    "appliances",
+    "lights",
+    "security"
+  ],
+  "description": {
+    "en": "Give Homey the ability to control your Home Easy devices",
+    "nl": "Laat Homey Home Easy modules aansturen."
+  },
+  "author": {
+    "name": "Athom B.V."
+  },
+  "images": {
+    "large": "./assets/images/large.jpg",
+    "small": "./assets/images/small.jpg"
+  },
+  "permissions": [
+    "homey:wireless:433"
+  ],
+  "drivers": [
+    {
+      "images": {
+        "large": "/drivers/HE202EU/assets/images/large.jpg",
+        "small": "/drivers/HE202EU/assets/images/small.jpg"
+      },
+      "icon": "/drivers/HE202EU/assets/icon.svg",
+      "capabilities": [
+        "onoff"
+      ],
+      "class": "socket",
+      "rf": {
+        "signal": "he_eu"
+      },
+      "pair": [
+        {
+          "id": "rf.choice",
+          "options": {
+            "title": "rf.pair.choice.title.switch",
+            "body": "rf.pair.choice.body.switch",
+            "choices": [
+              {
+                "name": "rf.pair.choice.buttons.copy.default",
+                "view": "rf.imitate",
+                "svg": "./assets/svg/remote.svg"
+              },
+              {
+                "name": "rf.pair.choice.buttons.generate.default",
+                "view": "rf.program",
+                "svg": "./assets/svg/socket.svg"
+              }
+            ]
+          }
+        },
+        {
+          "id": "rf.imitate",
+          "navigation": {
+            "prev": "rf.choice"
+          },
+          "options": {
+            "svg": "./assets/svg/remote.pair.svg"
+          }
+        },
+        {
+          "id": "rf.test_switch",
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "choose_slave"
+          }
+        },
+        {
+          "template": "choose_slave",
+          "id": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.program",
+          "navigation": {
+            "prev": "rf.choice"
+          },
+          "options": {
+            "svg": "./assets/svg/socket.pair.svg",
+            "body": "rf.pair.program.body.socket"
+          }
+        },
+        {
+          "id": "rf.test_switch.2",
+          "options": {
+            "body": "rf.pair.test.body.switch_generated"
+          },
+          "navigation": {
+            "prev": "rf.program",
+            "next": "choose_slave.2"
+          }
+        },
+        {
+          "template": "choose_slave",
+          "id": "choose_slave.2",
+          "navigation": {
+            "prev": "rf.test_switch.2",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "HE202EU",
+      "name": {
+        "en": "HE202EU"
+      }
+    },
+    {
+      "images": {
+        "large": "/drivers/HE221EU/assets/images/large.jpg",
+        "small": "/drivers/HE221EU/assets/images/small.jpg"
+      },
+      "icon": "/drivers/HE221EU/assets/icon.svg",
+      "capabilities": [],
+      "class": "other",
+      "rf": {
+        "signal": "he_eu"
+      },
+      "pair": [
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.remote",
+            "body": "rf.pair.imitate.body.remote",
+            "svg": "./assets/svg/remote.pair.svg"
+          }
+        },
+        {
+          "id": "rf.test",
+          "navigation": {
+            "next": "rf.done"
+          },
+          "options": {
+            "svg": "./assets/svg/remote.test.svg"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "HE221EU",
+      "name": {
+        "en": "HE221EU"
+      }
+    },
+    {
+      "images": {
+        "large": "/drivers/HE300WEU/assets/images/large.jpg",
+        "small": "/drivers/HE300WEU/assets/images/small.jpg"
+      },
+      "icon": "/drivers/HE300WEU/assets/icon.svg",
+      "capabilities": [],
+      "class": "other",
+      "rf": {
+        "signal": "he_eu"
+      },
+      "pair": [
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.remote",
+            "body": "rf.pair.imitate.body.remote",
+            "svg": "./assets/svg/remote.pair.svg"
+          }
+        },
+        {
+          "id": "rf.test",
+          "navigation": {
+            "next": "rf.done"
+          },
+          "options": {
+            "svg": "./assets/svg/remote.test.svg"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "HE300WEU",
+      "name": {
+        "en": "HE300WEU"
+      }
+    },
+    {
+      "images": {
+        "large": "/drivers/HE301EU/assets/images/large.jpg",
+        "small": "/drivers/HE301EU/assets/images/small.jpg"
+      },
+      "icon": "/drivers/HE301EU/assets/icon.svg",
+      "capabilities": [],
+      "class": "other",
+      "rf": {
+        "signal": "he_eu"
+      },
+      "pair": [
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.remote",
+            "body": "rf.pair.imitate.body.remote",
+            "svg": "./assets/svg/remote.pair.svg"
+          }
+        },
+        {
+          "id": "rf.test",
+          "navigation": {
+            "next": "rf.done"
+          },
+          "options": {
+            "svg": "./assets/svg/remote.test.svg"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "HE301EU",
+      "name": {
+        "en": "HE301EU"
+      }
+    },
+    {
+      "images": {
+        "large": "/drivers/HE307EU/assets/images/large.jpg",
+        "small": "/drivers/HE307EU/assets/images/small.jpg"
+      },
+      "icon": "/drivers/HE307EU/assets/icon.svg",
+      "capabilities": [],
+      "class": "other",
+      "rf": {
+        "signal": "he_eu"
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings",
+            "nl": "Algemene instellingen"
+          },
+          "children": [
+            {
+              "id": "rotated",
+              "type": "radio",
+              "value": "0",
+              "label": {
+                "en": "Rotate wall switch",
+                "nl": "Roteer wandschakelaar"
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Right Side Up",
+                    "nl": "Rechtop"
+                  }
+                },
+                {
+                  "id": "180",
+                  "label": {
+                    "en": "Upside Down",
+                    "nl": "Ondersteboven"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pair": [
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.wall_switch",
+            "body": "rf.pair.imitate.body.wall_switch",
+            "svg": "./assets/svg/switch.pair.svg"
+          }
+        },
+        {
+          "id": "rf.test",
+          "options": {
+            "title": "rf.pair.test.title.wall_switch",
+            "body": "rf.pair.test.body.wall_switch",
+            "svg": "./assets/svg/switch.test.svg"
+          },
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "HE307EU",
+      "name": {
+        "en": "HE307EU"
+      }
+    },
+    {
+      "images": {
+        "large": "/drivers/HE308EU/assets/images/large.jpg",
+        "small": "/drivers/HE308EU/assets/images/small.jpg"
+      },
+      "icon": "/drivers/HE308EU/assets/icon.svg",
+      "capabilities": [],
+      "class": "other",
+      "rf": {
+        "signal": "he_eu"
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings",
+            "nl": "Algemene instellingen"
+          },
+          "children": [
+            {
+              "id": "rotated",
+              "type": "radio",
+              "value": "0",
+              "label": {
+                "en": "Rotate wall switch",
+                "nl": "Roteer wandschakelaar"
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Right Side Up",
+                    "nl": "Rechtop"
+                  }
+                },
+                {
+                  "id": "180",
+                  "label": {
+                    "en": "Upside Down",
+                    "nl": "Ondersteboven"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pair": [
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.wall_switch",
+            "body": "rf.pair.imitate.body.wall_switch",
+            "svg": "./assets/svg/switch.pair.svg"
+          }
+        },
+        {
+          "id": "rf.test",
+          "options": {
+            "title": "rf.pair.test.title.wall_switch",
+            "body": "rf.pair.test.body.wall_switch",
+            "svg": "./assets/svg/switch.test.svg"
+          },
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "HE308EU",
+      "name": {
+        "en": "HE308EU"
+      }
+    },
+    {
+      "images": {
+        "large": "/drivers/HE332EU/assets/images/large.jpg",
+        "small": "/drivers/HE332EU/assets/images/small.jpg"
+      },
+      "icon": "/drivers/HE332EU/assets/icon.svg",
+      "capabilities": [
+        "onoff"
+      ],
+      "class": "socket",
+      "rf": {
+        "signal": "he_eu"
+      },
+      "pair": [
+        {
+          "id": "rf.choice",
+          "options": {
+            "title": "rf.pair.choice.title.switch",
+            "body": "rf.pair.choice.body.switch",
+            "choices": [
+              {
+                "name": "rf.pair.choice.buttons.copy.default",
+                "view": "rf.imitate",
+                "svg": "./assets/svg/remote.svg"
+              },
+              {
+                "name": "rf.pair.choice.buttons.generate.default",
+                "view": "rf.program",
+                "svg": "./assets/svg/socket.svg"
+              }
+            ]
+          }
+        },
+        {
+          "id": "rf.imitate",
+          "navigation": {
+            "prev": "rf.choice"
+          },
+          "options": {
+            "svg": "./assets/svg/remote.pair.svg"
+          }
+        },
+        {
+          "id": "rf.test_switch",
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "choose_slave"
+          }
+        },
+        {
+          "template": "choose_slave",
+          "id": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.program",
+          "navigation": {
+            "prev": "rf.choice"
+          },
+          "options": {
+            "svg": "./assets/svg/socket.pair.svg",
+            "body": "rf.pair.program.body.socket"
+          }
+        },
+        {
+          "id": "rf.test_switch.2",
+          "options": {
+            "body": "rf.pair.test.body.switch_generated"
+          },
+          "navigation": {
+            "prev": "rf.program",
+            "next": "choose_slave.2"
+          }
+        },
+        {
+          "template": "choose_slave",
+          "id": "choose_slave.2",
+          "navigation": {
+            "prev": "rf.test_switch.2",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "HE332EU",
+      "name": {
+        "en": "HE332EU"
+      }
+    },
+    {
+      "images": {
+        "large": "/drivers/HE333EU/assets/images/large.jpg",
+        "small": "/drivers/HE333EU/assets/images/small.jpg"
+      },
+      "icon": "/drivers/HE333EU/assets/icon.svg",
+      "capabilities": [
+        "onoff"
+      ],
+      "class": "socket",
+      "rf": {
+        "signal": "he_eu"
+      },
+      "pair": [
+        {
+          "id": "rf.choice",
+          "options": {
+            "title": "rf.pair.choice.title.switch",
+            "body": "rf.pair.choice.body.switch",
+            "choices": [
+              {
+                "name": "rf.pair.choice.buttons.copy.default",
+                "view": "rf.imitate",
+                "svg": "./assets/svg/remote.svg"
+              },
+              {
+                "name": "rf.pair.choice.buttons.generate.default",
+                "view": "rf.program",
+                "svg": "./assets/svg/socket.svg"
+              }
+            ]
+          }
+        },
+        {
+          "id": "rf.imitate",
+          "navigation": {
+            "prev": "rf.choice"
+          },
+          "options": {
+            "svg": "./assets/svg/remote.pair.svg"
+          }
+        },
+        {
+          "id": "rf.test_switch",
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "choose_slave"
+          }
+        },
+        {
+          "template": "choose_slave",
+          "id": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.program",
+          "navigation": {
+            "prev": "rf.choice"
+          },
+          "options": {
+            "svg": "./assets/svg/socket.pair.svg",
+            "body": "rf.pair.program.body.socket"
+          }
+        },
+        {
+          "id": "rf.test_switch.2",
+          "options": {
+            "body": "rf.pair.test.body.switch_generated"
+          },
+          "navigation": {
+            "prev": "rf.program",
+            "next": "choose_slave.2"
+          }
+        },
+        {
+          "template": "choose_slave",
+          "id": "choose_slave.2",
+          "navigation": {
+            "prev": "rf.test_switch.2",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "HE333EU",
+      "name": {
+        "en": "HE333EU"
+      }
+    },
+    {
+      "images": {
+        "large": "/drivers/HE432EU/assets/images/large.jpg",
+        "small": "/drivers/HE432EU/assets/images/small.jpg"
+      },
+      "icon": "/drivers/HE432EU/assets/icon.svg",
+      "capabilities": [
+        "onoff"
+      ],
+      "class": "socket",
+      "rf": {
+        "signal": "he_eu"
+      },
+      "pair": [
+        {
+          "id": "rf.choice",
+          "options": {
+            "title": "rf.pair.choice.title.switch",
+            "body": "rf.pair.choice.body.switch",
+            "choices": [
+              {
+                "name": "rf.pair.choice.buttons.copy.default",
+                "view": "rf.imitate",
+                "svg": "./assets/svg/remote.svg"
+              },
+              {
+                "name": "rf.pair.choice.buttons.generate.default",
+                "view": "rf.program",
+                "svg": "./assets/svg/socket.svg"
+              }
+            ]
+          }
+        },
+        {
+          "id": "rf.imitate",
+          "navigation": {
+            "prev": "rf.choice"
+          },
+          "options": {
+            "svg": "./assets/svg/remote.pair.svg"
+          }
+        },
+        {
+          "id": "rf.test_switch",
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "choose_slave"
+          }
+        },
+        {
+          "template": "choose_slave",
+          "id": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.program",
+          "navigation": {
+            "prev": "rf.choice"
+          },
+          "options": {
+            "svg": "./assets/svg/socket.pair.svg",
+            "body": "rf.pair.program.body.socket"
+          }
+        },
+        {
+          "id": "rf.test_switch.2",
+          "options": {
+            "body": "rf.pair.test.body.switch_generated"
+          },
+          "navigation": {
+            "prev": "rf.program",
+            "next": "choose_slave.2"
+          }
+        },
+        {
+          "template": "choose_slave",
+          "id": "choose_slave.2",
+          "navigation": {
+            "prev": "rf.test_switch.2",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "HE432EU",
+      "name": {
+        "en": "HE432EU"
+      }
+    },
+    {
+      "images": {
+        "large": "/drivers/HE844A/assets/images/large.jpg",
+        "small": "/drivers/HE844A/assets/images/small.jpg"
+      },
+      "icon": "/drivers/HE844A/assets/icon.svg",
+      "capabilities": [],
+      "class": "other",
+      "rf": {
+        "signal": "smartwares"
+      },
+      "pair": [
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.remote",
+            "body": "rf.pair.imitate.body.remote",
+            "svg": "./assets/svg/remote.pair.svg"
+          }
+        },
+        {
+          "id": "rf.test",
+          "navigation": {
+            "next": "rf.done"
+          },
+          "options": {
+            "svg": "./assets/svg/remote.test.svg"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "HE844A",
+      "name": {
+        "en": "HE844A"
+      }
+    },
+    {
+      "images": {
+        "large": "/drivers/HE878A/assets/images/large.jpg",
+        "small": "/drivers/HE878A/assets/images/small.jpg"
+      },
+      "icon": "/drivers/HE878A/assets/icon.svg",
+      "capabilities": [
+        "onoff"
+      ],
+      "class": "socket",
+      "rf": {
+        "signal": "smartwares"
+      },
+      "pair": [
+        {
+          "id": "rf.choice",
+          "options": {
+            "title": "rf.pair.choice.title.switch",
+            "body": "rf.pair.choice.body.switch",
+            "choices": [
+              {
+                "name": "rf.pair.choice.buttons.copy.default",
+                "view": "rf.imitate",
+                "svg": "./assets/svg/remote.svg"
+              },
+              {
+                "name": "rf.pair.choice.buttons.generate.default",
+                "view": "rf.program",
+                "svg": "./assets/svg/socket.svg"
+              }
+            ]
+          }
+        },
+        {
+          "id": "rf.imitate",
+          "navigation": {
+            "prev": "rf.choice"
+          },
+          "options": {
+            "svg": "./assets/svg/remote.pair.svg"
+          }
+        },
+        {
+          "id": "rf.test_switch",
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "choose_slave"
+          }
+        },
+        {
+          "template": "choose_slave",
+          "id": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.program",
+          "navigation": {
+            "prev": "rf.choice"
+          },
+          "options": {
+            "svg": "./assets/svg/socket.pair.svg",
+            "body": "rf.pair.program.body.socket"
+          }
+        },
+        {
+          "id": "rf.test_switch.2",
+          "options": {
+            "body": "rf.pair.test.body.switch_generated"
+          },
+          "navigation": {
+            "prev": "rf.program",
+            "next": "choose_slave.2"
+          }
+        },
+        {
+          "template": "choose_slave",
+          "id": "choose_slave.2",
+          "navigation": {
+            "prev": "rf.test_switch.2",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "HE878A",
+      "name": {
+        "en": "HE878A"
+      }
+    }
+  ],
+  "flow": {
+    "triggers": [
+      {
+        "id": "HE221EU:received",
+        "title": {
+          "en": "Button is pressed",
+          "nl": "Knop is ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HE221EU"
+          },
+          {
+            "name": "channel",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "00",
+                "label": {
+                  "en": "Channel I",
+                  "nl": "Kanaal I"
+                }
+              },
+              {
+                "id": "01",
+                "label": {
+                  "en": "Channel II",
+                  "nl": "Kanaal II"
+                }
+              },
+              {
+                "id": "10",
+                "label": {
+                  "en": "Channel III",
+                  "nl": "Kanaal III"
+                }
+              },
+              {
+                "id": "11",
+                "label": {
+                  "en": "Channel IV",
+                  "nl": "Kanaal IV"
+                }
+              }
+            ]
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "00",
+                "label": {
+                  "en": "Button 1",
+                  "nl": "Knop 1"
+                }
+              },
+              {
+                "id": "01",
+                "label": {
+                  "en": "Button 2",
+                  "nl": "Knop 2"
+                }
+              },
+              {
+                "id": "10",
+                "label": {
+                  "en": "Button 3",
+                  "nl": "Knop 3"
+                }
+              },
+              {
+                "id": "11",
+                "label": {
+                  "en": "Button 4",
+                  "nl": "Knop 4"
+                }
+              },
+              {
+                "id": "g",
+                "label": {
+                  "en": "Group Button",
+                  "nl": "Groep Knop"
+                }
+              }
+            ]
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan"
+                }
+              },
+              {
+                "id": "0",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HE300WEU:received",
+        "title": {
+          "en": "Button is pressed",
+          "nl": "Knop is ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HE300WEU"
+          },
+          {
+            "name": "channel",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "00",
+                "label": {
+                  "en": "Channel I",
+                  "nl": "Kanaal I"
+                }
+              },
+              {
+                "id": "01",
+                "label": {
+                  "en": "Channel II",
+                  "nl": "Kanaal II"
+                }
+              },
+              {
+                "id": "10",
+                "label": {
+                  "en": "Channel III",
+                  "nl": "Kanaal III"
+                }
+              },
+              {
+                "id": "11",
+                "label": {
+                  "en": "Channel IV",
+                  "nl": "Kanaal IV"
+                }
+              }
+            ]
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "00",
+                "label": {
+                  "en": "Button 1",
+                  "nl": "Knop 1"
+                }
+              },
+              {
+                "id": "01",
+                "label": {
+                  "en": "Button 2",
+                  "nl": "Knop 2"
+                }
+              },
+              {
+                "id": "10",
+                "label": {
+                  "en": "Button 3",
+                  "nl": "Knop 3"
+                }
+              },
+              {
+                "id": "11",
+                "label": {
+                  "en": "Button 4",
+                  "nl": "Knop 4"
+                }
+              },
+              {
+                "id": "g",
+                "label": {
+                  "en": "Group Button",
+                  "nl": "Groep Knop"
+                }
+              }
+            ]
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan"
+                }
+              },
+              {
+                "id": "0",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HE301EU:received",
+        "title": {
+          "en": "Button is pressed",
+          "nl": "Knop is ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HE301EU"
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan"
+                }
+              },
+              {
+                "id": "0",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HE307EU:received",
+        "title": {
+          "en": "Button is pressed",
+          "nl": "Knop is ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HE307EU"
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan"
+                }
+              },
+              {
+                "id": "0",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HE308EU:received",
+        "title": {
+          "en": "Button is pressed",
+          "nl": "Knop is ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HE308EU"
+          },
+          {
+            "name": "unit",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1010",
+                "label": {
+                  "en": "Left Button",
+                  "nl": "Linker Knop"
+                }
+              },
+              {
+                "id": "1011",
+                "label": {
+                  "en": "Right Button",
+                  "nl": "Rechter Knop"
+                }
+              }
+            ]
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan"
+                }
+              },
+              {
+                "id": "0",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HE844A:received",
+        "title": {
+          "en": "Button is pressed",
+          "nl": "Knop is ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HE844A"
+          },
+          {
+            "name": "channel",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "00",
+                "label": {
+                  "en": "Channel I",
+                  "nl": "Kanaal I"
+                }
+              },
+              {
+                "id": "01",
+                "label": {
+                  "en": "Channel II",
+                  "nl": "Kanaal II"
+                }
+              },
+              {
+                "id": "10",
+                "label": {
+                  "en": "Channel III",
+                  "nl": "Kanaal III"
+                }
+              },
+              {
+                "id": "11",
+                "label": {
+                  "en": "Channel IV",
+                  "nl": "Kanaal IV"
+                }
+              }
+            ]
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "00",
+                "label": {
+                  "en": "Button 1",
+                  "nl": "Knop 1"
+                }
+              },
+              {
+                "id": "01",
+                "label": {
+                  "en": "Button 2",
+                  "nl": "Knop 2"
+                }
+              },
+              {
+                "id": "10",
+                "label": {
+                  "en": "Button 3",
+                  "nl": "Knop 3"
+                }
+              },
+              {
+                "id": "11",
+                "label": {
+                  "en": "Button 4",
+                  "nl": "Knop 4"
+                }
+              },
+              {
+                "id": "g",
+                "label": {
+                  "en": "Group Button",
+                  "nl": "Groep Knop"
+                }
+              }
+            ]
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan"
+                }
+              },
+              {
+                "id": "0",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "signals": {
+    "433": {
+      "he_eu": {
+        "sof": [
+          344,
+          1320,
+          222,
+          1304
+        ],
+        "eof": [
+          255
+        ],
+        "words": [
+          [
+            254,
+            252
+          ],
+          [
+            260,
+            1282
+          ]
+        ],
+        "interval": 10150,
+        "sensitivity": 0.4,
+        "repetitions": 10,
+        "minimalLength": 55,
+        "maximalLength": 62
+      },
+      "smartwares": {
+        "sof": [
+          265,
+          2580
+        ],
+        "eof": [
+          265
+        ],
+        "words": [
+          [
+            265,
+            295,
+            265,
+            1280
+          ],
+          [
+            265,
+            1280,
+            265,
+            295
+          ]
+        ],
+        "interval": 10665,
+        "sensitivity": 0.4,
+        "repetitions": 10,
+        "minimalLength": 32,
+        "maximalLength": 32
+      }
+    }
+  }
+}

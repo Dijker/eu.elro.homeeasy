@@ -1,0 +1,62 @@
+{
+    "$flow": {
+        "triggers": [
+            {
+                "id": "{{driverId}}:received",
+                "title": {
+                    "en": "Button is pressed",
+                    "nl": "Knop is ingedrukt"
+                },
+                "args": [
+                    {
+                        "name": "unit",
+                        "type": "dropdown",
+                        "values": [
+                            {
+                                "id": "0000",
+                                "label": {
+                                    "en": "Channel 1",
+                                    "nl": "Kanaal 1"
+                                }
+                            },
+                            {
+                                "id": "0001",
+                                "label": {
+                                    "en": "Channel 2",
+                                    "nl": "Kanaal 2"
+                                }
+                            },
+                            {
+                                "id": "0010",
+                                "label": {
+                                    "en": "Channel 3",
+                                    "nl": "Kanaal 3"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "state",
+                        "type": "dropdown",
+                        "values": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "en": "On",
+                                    "nl": "Aan"
+                                }
+                            },
+                            {
+                                "id": "0",
+                                "label": {
+                                    "en": "Off",
+                                    "nl": "Uit"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

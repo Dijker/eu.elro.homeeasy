@@ -1,0 +1,12 @@
+{
+    "images": {
+        "large": "{{driverPath}}/assets/images/large.jpg",
+        "small": "{{driverPath}}/assets/images/small.jpg"
+    },
+    "icon": "{{driverPath}}/assets/icon.svg",
+    "capabilities": [],
+    "class": "other",
+    "rf": {
+        "signal": "he_eu"
+    }
+}

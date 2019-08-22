@@ -1,0 +1,22 @@
+{
+    "$extends": [
+        "defaults",
+        "rf.remote",
+        "flow.remote.kaku"
+    ],
+    "id": "HE844A",
+    "name": {
+        "en": "HE844A"
+    },
+    "rf": {
+        "signal": "smartwares"
+    },
+    "$pairOptions": {
+        "rf.imitate": {
+            "svg": "./assets/svg/remote.pair.svg"
+        },
+        "rf.test": {
+            "svg": "./assets/svg/remote.test.svg"
+        }
+    }
+}

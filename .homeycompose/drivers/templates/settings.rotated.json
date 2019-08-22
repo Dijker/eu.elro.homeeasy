@@ -1,0 +1,43 @@
+{
+    "settings": [
+        {
+            "type": "group",
+            "label": {
+                "en": "General settings",
+                "nl": "Algemene instellingen"
+            },
+            "children": [
+                {
+                    "id": "rotated",
+                    "type": "radio",
+                    "value": "0",
+                    "label": {
+                        "en": "Invert up/down signal",
+                        "nl": "Inverteer omhoog/omlaag signaal"
+                    },
+                    "values": [
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "No",
+                                "nl": "Nee"
+                            }
+                        },
+                        {
+                            "id": "180",
+                            "label": {
+                                "en": "Yes",
+                                "nl": "Ja"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$_devices": [
+        "SUN-650",
+        "ASUN-650"
+    ],
+    "$_hash": "migrate.3.4fc80ebd925b7efe99c29326a48e968e"
+}

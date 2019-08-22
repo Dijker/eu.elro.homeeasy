@@ -1,0 +1,19 @@
+{
+    "$extends": [
+        "defaults",
+        "rf.remote",
+        "flow.switch.single"
+    ],
+    "id": "HE301EU",
+    "name": {
+        "en": "HE301EU"
+    },
+    "$pairOptions": {
+        "rf.imitate": {
+            "svg": "./assets/svg/remote.pair.svg"
+        },
+        "rf.test": {
+            "svg": "./assets/svg/remote.test.svg"
+        }
+    }
+}

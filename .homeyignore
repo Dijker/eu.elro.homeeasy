@@ -1,0 +1,12 @@
+.idea
+.git
+*@backup*
+
+433_generator/assets/*/images/
+433_generator/modules/klikaanklikuit/assets/
+433_generator/modules/klikaanklikuit/locales/
+433_generator/modules/klikaanklikuit/433_generator/assets/
+433_generator/modules/klikaanklikuit/433_generator/config.js
+433_generator/modules/klikaanklikuit/drivers/
+!433_generator/modules/klikaanklikuit/drivers/lib
+433_generator/modules/klikaanklikuit/*.json

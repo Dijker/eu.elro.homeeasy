@@ -1,0 +1,32 @@
+{
+    "pair": [
+        {
+            "id": "rf.imitate",
+            "$template": "rf.imitate",
+            "options": {
+                "body": "rf.pair.imitate.body.sensor",
+                "svg": "assets/svg/pair.svg",
+                "title": "rf.pair.imitate.title.motion_sensor"
+            }
+        },
+        {
+            "id": "rf.test",
+            "$template": "rf.test",
+            "options": {
+                "body": "rf.pair.test.body.sensor",
+                "initWithDeviceData": true,
+                "svg": "motion",
+                "capability": "alarm_motion",
+                "title": "rf.pair.test.title.motion_sensor"
+            },
+            "navigation": {
+                "prev": "rf.imitate",
+                "next": "rf.done"
+            }
+        },
+        {
+            "id": "rf.done",
+            "$template": "rf.done"
+        }
+    ]
+}

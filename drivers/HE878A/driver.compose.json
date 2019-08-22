@@ -1,0 +1,22 @@
+{
+    "$extends": [
+        "defaults",
+        "rf.socket"
+    ],
+    "id": "HE878A",
+    "name": {
+        "en": "HE878A"
+    },
+    "rf": {
+        "signal": "smartwares"
+    },
+    "$pairOptions": {
+        "rf.imitate": {
+            "svg": "./assets/svg/remote.pair.svg"
+        },
+        "rf.program": {
+            "svg": "./assets/svg/socket.pair.svg",
+            "body": "rf.pair.program.body.socket"
+        }
+    }
+}

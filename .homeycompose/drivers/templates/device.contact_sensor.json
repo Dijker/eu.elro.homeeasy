@@ -1,0 +1,10 @@
+{
+    "class": "sensor",
+    "capabilities": [
+        "alarm_contact"
+    ],
+    "rf": {
+        "signal": "smartwares",
+        "sendToggleAfterTimeout": [null, "timeout"]
+    }
+}
